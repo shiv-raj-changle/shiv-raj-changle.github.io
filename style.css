@@ -16,6 +16,7 @@ body{
     inset: 20px;
     background: #a6c2f7;
     width: 80px;
+    height: 80px;
     border-left: 10px solid #a6c2f7;
     border-radius: 50px;
     box-shadow: 15px 15px 25px rgba(0,0,0,0.3);
@@ -24,6 +25,7 @@ body{
 } 
 .navigation.active{
     width: 300px;
+    height: 95vh;
     border-radius: 20px;
     transition: 0.5s;
 }
