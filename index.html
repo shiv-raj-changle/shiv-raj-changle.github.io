@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <meta name="description" content="Professional portfolio showcasing projects and skills">
+    <title>Shivraj Changle | Portfolio</title>
+    <meta name="description" content="Professional portfolio of Shivraj Changle - Software Developer specializing in Qt, QML, C++, and AI integration">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -99,7 +99,7 @@
             font-size: 0.9rem;
             letter-spacing: 0.5px;
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, color 0.3s ease;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -119,6 +119,7 @@
         .btn-primary:hover {
             background: var(--accent-color-hover);
             box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
+            color: white;
         }
 
         .btn-secondary {
@@ -129,6 +130,7 @@
 
         .btn-secondary:hover {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            color: var(--text-primary);
         }
 
         /* Navigation */
@@ -465,7 +467,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
         }
 
         .project-link:hover {
@@ -800,13 +802,9 @@
     </style>
 </head>
 <body>
-    <!-- Cursor Effects -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
     <!-- Navigation -->
     <nav class="navbar glass">
-        <a href="#" class="logo">YourName</a>
+        <a href="#" class="logo">Shivraj Changle</a>
         <div class="nav-links">
             <a href="#hero" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
@@ -831,8 +829,8 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Your Name</h1>
-                <p class="hero-subtitle">Full Stack Developer & UI/UX Designer</p>
+                <h1 class="hero-title">Shivraj Changle</h1>
+                <p class="hero-subtitle">Software Developer | Qt, QML, C++ | Full-Stack & AI Enthusiast</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -847,20 +845,24 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-container">
                 <div class="about-content">
-                    <h3>Hello! I'm Your Name</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc ultricies nunc, quis aliquam nisl nunc vel nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc ultricies nunc, quis aliquam nisl nunc vel nisl.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc ultricies nunc, quis aliquam nisl nunc vel nisl.</p>
+                    <h3>Hello! I'm Shivraj Changle</h3>
+                    <p>I am a highly skilled C++ and Qt developer with expertise in building high-performance, multithreaded applications for desktop, embedded systems, and WebAssembly. With over 2 years of experience, I have worked on multiple real-time processing, AI, and UI-heavy applications.</p>
+                    <p>I specialize in multithreading, OpenCV, Qt for WebAssembly, and device integration. Recently, I have been exploring Angular, .NET, and Python for full-stack development. My ability to solve complex problems, optimize performance, and integrate new technologies makes me a valuable asset to any development team.</p>
                     <div class="skills">
-                        <div class="skill-tag glass">HTML/CSS</div>
-                        <div class="skill-tag glass">JavaScript</div>
-                        <div class="skill-tag glass">React.js</div>
-                        <div class="skill-tag glass">Node.js</div>
-                        <div class="skill-tag glass">UI/UX Design</div>
-                        <div class="skill-tag glass">Responsive Design</div>
+                        <div class="skill-tag glass">Qt/QML</div>
+                        <div class="skill-tag glass">C++</div>
+                        <div class="skill-tag glass">Multithreading</div>
+                        <div class="skill-tag glass">WebAssembly</div>
+                        <div class="skill-tag glass">OpenCV</div>
+                        <div class="skill-tag glass">Python</div>
+                        <div class="skill-tag glass">Angular</div>
+                        <div class="skill-tag glass">.NET</div>
+                        <div class="skill-tag glass">Docker</div>
+                        <div class="skill-tag glass">Git/CI/CD</div>
                     </div>
                 </div>
                 <div class="about-image neuro">
-                    <img src="/api/placeholder/400/320" alt="Your Name" />
+                    <img src="/api/placeholder/400/320" alt="Shivaraj Changale" />
                 </div>
             </div>
         </div>
@@ -874,19 +876,20 @@
                 <!-- Project 1 -->
                 <div class="project-card glass">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Project 1" />
+                        <img src="/api/placeholder/400/320" alt="Qt WebAssembly Application" />
                     </div>
                     <div class="project-details">
-                        <h3 class="project-title">Project Title 1</h3>
-                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies.</p>
+                        <h3 class="project-title">Qt & WebAssembly Application</h3>
+                        <p class="project-description">Built a C++/QML-based Qt application that runs in the browser using Emscripten (em++, wasm-ld) to compile for WebAssembly. Debugged threading & memory growth issues for a smoother experience.</p>
                         <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">MongoDB</span>
+                            <span class="project-tag">Qt/QML</span>
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">WebAssembly</span>
+                            <span class="project-tag">Emscripten</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -894,19 +897,20 @@
                 <!-- Project 2 -->
                 <div class="project-card glass">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Project 2" />
+                        <img src="/api/placeholder/400/320" alt="Multithreaded Video Processing" />
                     </div>
                     <div class="project-details">
-                        <h3 class="project-title">Project Title 2</h3>
-                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies.</p>
+                        <h3 class="project-title">Multithreaded Video Processing</h3>
+                        <p class="project-description">Designed a real-time video processing tool using OpenCV. Implemented binary semaphores to handle thread synchronization and achieved optimized memory usage for high-resolution video streams.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Vue.js</span>
-                            <span class="project-tag">Express</span>
-                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">OpenCV</span>
+                            <span class="project-tag">Multithreading</span>
+                            <span class="project-tag">Binary Semaphores</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -914,19 +918,41 @@
                 <!-- Project 3 -->
                 <div class="project-card glass">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Project 3" />
+                        <img src="/api/placeholder/400/320" alt="Offline Chatbot" />
                     </div>
                     <div class="project-details">
-                        <h3 class="project-title">Project Title 3</h3>
-                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies.</p>
+                        <h3 class="project-title">Offline Chatbot with ChromaDB</h3>
+                        <p class="project-description">Built a Python-based chatbot with vector search capabilities. Integrated ChromaDB for fast embedding-based retrieval and packaged the chatbot into a standalone executable using PyInstaller.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Next.js</span>
-                            <span class="project-tag">Tailwind CSS</span>
-                            <span class="project-tag">Supabase</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">PySide6</span>
+                            <span class="project-tag">ChromaDB</span>
+                            <span class="project-tag">AI</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card glass">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/320" alt="Docker AI Deployment" />
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">Docker-Based AI Deployment</h3>
+                        <p class="project-description">Developed a Streamlit-based chatbot application. Managed a 2.6GB Python environment and 2.7GB AI model, optimizing the Docker image to 2GB with persistent model storage.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">AI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -942,258 +968,263 @@
                 <a href="#" class="btn btn-primary resume-btn">Download Resume <i class="fas fa-download"></i></a>
             </div>
             <div class="timeline">
-                <!-- Timeline Item 1 -->
-                <div class="timeline-item left">
-                    <div class="timeline-content glass">
-                        <div class="timeline-date">2021 - Present</div>
-                        <h3 class="timeline-title">Senior Developer</h3>
-                        <div class="timeline-subtitle">Company Name</div>
-                        <p class="timeline-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc ultricies nunc.</p>
-                    </div>
+               <!-- Timeline Item 1 -->
+               <div class="timeline-item left">
+                <div class="timeline-content glass">
+                    <div class="timeline-date">2022 - Present</div>
+                    <h3 class="timeline-title">Software Developer</h3>
+                    <div class="timeline-subtitle">Qt & C++ Focus (2+ Years)</div>
+                    <p class="timeline-description">Developed multithreaded, real-time applications for ultrasonic thickness gauges (Mozart 62DLP, 72DLP) & XRF analyzers. Built video processing tools with OpenCV and worked on Qt WebAssembly.</p>
                 </div>
+            </div>
 
-                <!-- Timeline Item 2 -->
-                <div class="timeline-item right">
-                    <div class="timeline-content glass">
-                        <div class="timeline-date">2018 - 2021</div>
-                        <h3 class="timeline-title">Full Stack Developer</h3>
-                        <div class="timeline-subtitle">Company Name</div>
-                        <p class="timeline-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc ultricies nunc.</p>
-                    </div>
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item right">
+                <div class="timeline-content glass">
+                    <div class="timeline-date">2023</div>
+                    <h3 class="timeline-title">AI Application Developer</h3>
+                    <div class="timeline-subtitle">ChromaDB & Vector Search</div>
+                    <p class="timeline-description">Created an offline chatbot application using ChromaDB for vector-based search. Optimized Docker images (from 9GB to under 2GB) by managing model storage and dependencies.</p>
                 </div>
+            </div>
 
-                <!-- Timeline Item 3 -->
-                <div class="timeline-item left">
-                    <div class="timeline-content glass">
-                        <div class="timeline-date">2016 - 2018</div>
-                        <h3 class="timeline-title">Frontend Developer</h3>
-                        <div class="timeline-subtitle">Company Name</div>
-                        <p class="timeline-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc ultricies nunc.</p>
-                    </div>
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item left">
+                <div class="timeline-content glass">
+                    <div class="timeline-date">2022</div>
+                    <h3 class="timeline-title">Embedded Systems Developer</h3>
+                    <div class="timeline-subtitle">Device Integration</div>
+                    <p class="timeline-description">Integrated Cppcheck & MISRA static analysis into the workflow for safety-critical applications. Developed and managed Python-based automation scripts for Google Sheets.</p>
                 </div>
+            </div>
 
-                <!-- Timeline Item 4 -->
-                <div class="timeline-item right">
-                    <div class="timeline-content glass">
-                        <div class="timeline-date">2014 - 2016</div>
-                        <h3 class="timeline-title">UI/UX Designer</h3>
-                        <div class="timeline-subtitle">Company Name</div>
-                        <p class="timeline-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc ultricies nunc.</p>
-                    </div>
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item right">
+                <div class="timeline-content glass">
+                    <div class="timeline-date">Certifications</div>
+                    <h3 class="timeline-title">MISRA C++ Compliance</h3>
+                    <div class="timeline-subtitle">Static Analysis Expert</div>
+                    <p class="timeline-description">Implemented Cppcheck & cpplint for static analysis. Configured .cppcheck settings for both GUI and CLI execution for safety-critical applications.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
-                    <p>Email: your.email@example.com</p>
-                    <p>Location: Your City, Country</p>
-                    <div class="contact-links">
-                        <a href="#" class="contact-link glass"><i class="fab fa-github"></i></a>
-                        <a href="#" class="contact-link glass"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="contact-link glass"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="contact-link glass"><i class="fab fa-instagram"></i></a>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>Feel free to reach out if you're looking for a skilled Qt/C++ developer or have a project that requires multithreaded application development or AI integration.</p>
+                <p>Email: shivraj.changle@example.com</p>
+                <p>Location: India</p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/shivraj-changle-aa596b1bb" target="_blank">linkedin.com/in/shivraj-changle-aa596b1bb</a></p>
+                <div class="contact-links">
+                    <a href="#" class="contact-link glass"><i class="fab fa-github"></i></a>
+                    <a href="#" class="contact-link glass"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="contact-link glass"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="contact-link glass"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-form neuro">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-input" required>
                     </div>
-                </div>
-                <div class="contact-form neuro">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" class="form-input form-textarea" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-input form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">YourName</div>
-                <div class="footer-links">
-                    <a href="#hero" class="footer-link">Home</a>
-                    <a href="#about" class="footer-link">About</a>
-                    <a href="#projects" class="footer-link">Projects</a>
-                    <a href="#resume" class="footer-link">Resume</a>
-                    <a href="#contact" class="footer-link">Contact</a>
-                </div>
-                <div class="footer-copyright">
-                    &copy; <span id="year"></span> YourName. All rights reserved.
-                </div>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">Shivraj Changle</div>
+            <div class="footer-links">
+                <a href="#hero" class="footer-link">Home</a>
+                <a href="#about" class="footer-link">About</a>
+                <a href="#projects" class="footer-link">Projects</a>
+                <a href="#resume" class="footer-link">Resume</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; <span id="year"></span> Shivraj Changle. All rights reserved.
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- Scripts -->
-    <script>
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Theme toggle functionality
-        const themeToggle = document.querySelector('.theme-toggle');
-        const themeIcon = themeToggle.querySelector('i');
-        
-        themeToggle.addEventListener('click', () => {
-            document.body.setAttribute('data-theme', 
-                document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-            themeIcon.className = document.body.getAttribute('data-theme') === 'dark' 
-                ? 'fas fa-sun' : 'fas fa-moon';
+<!-- Scripts -->
+<script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Theme toggle functionality
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    themeToggle.addEventListener('click', () => {
+        document.body.setAttribute('data-theme', 
+            document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        themeIcon.className = document.body.getAttribute('data-theme') === 'dark' 
+            ? 'fas fa-sun' : 'fas fa-moon';
+    });
+    
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileToggle.querySelector('i').className = navLinks.classList.contains('active')
+            ? 'fas fa-times' : 'fas fa-bars';
+    });
+    
+    // Close mobile menu when clicking on a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            mobileToggle.querySelector('i').className = 'fas fa-bars';
         });
+    });
+    
+    // GSAP Animations
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Hero animations
+    gsap.to('.blob-1', {
+        x: 100,
+        y: 50,
+        duration: 20,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+    
+    gsap.to('.blob-2', {
+        x: -100,
+        y: -50,
+        duration: 18,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+    
+    gsap.to('.blob-3', {
+        x: -50,
+        y: 100,
+        duration: 22,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+    });
+    
+    // Scroll animations for sections
+    const sections = document.querySelectorAll('section');
+    
+    sections.forEach(section => {
+        gsap.fromTo(
+            section, 
+            { y: 50, opacity: 0 },
+            { 
+                y: 0, 
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    end: 'top 50%',
+                    scrub: 1
+                }
+            }
+        );
+    });
+    
+    // Timeline animations
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    timelineItems.forEach(item => {
+        gsap.fromTo(
+            item, 
+            { 
+                x: item.classList.contains('left') ? -50 : 50, 
+                opacity: 0 
+            },
+            { 
+                x: 0, 
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 80%',
+                    end: 'top 60%',
+                    scrub: 1
+                }
+            }
+        );
+    });
+    
+    // Form submission handling with email functionality
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
         
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navLinks = document.querySelector('.nav-links');
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
         
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileToggle.querySelector('i').className = navLinks.classList.contains('active')
-                ? 'fas fa-times' : 'fas fa-bars';
-        });
+        // In a real implementation, you would send this data to your server
+        // which would then forward it to your email address
+        // For demonstration purposes, we'll simulate this process
         
-        // Close mobile menu when clicking on a nav link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileToggle.querySelector('i').className = 'fas fa-bars';
+        // This would be replaced with actual server-side code
+        const sendEmail = async (data) => {
+            try {
+                // In a real implementation, this would be an API endpoint
+                // that processes the form data and sends an email
+                // e.g., await fetch('/api/send-email', {
+                //    method: 'POST',
+                //    headers: { 'Content-Type': 'application/json' },
+                //    body: JSON.stringify(data)
+                // });
+                
+                console.log('Email would be sent to shivraj.changle@example.com with:', data);
+                return { success: true };
+            } catch (error) {
+                console.error('Error sending email:', error);
+                return { success: false, error };
+            }
+        };
+        
+        // Simulate sending email
+        sendEmail({ name, email, message })
+            .then(response => {
+                if (response.success) {
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Show success message
+                    alert('Thanks for your message! I\'ll get back to you soon.');
+                } else {
+                    alert('There was a problem sending your message. Please try again later.');
+                }
             });
-        });
-        
-        // Custom cursor effect
-        const cursor = document.querySelector('.cursor');
-        const cursorFollower = document.querySelector('.cursor-follower');
-        
-        document.addEventListener('mousemove', e => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            
-            setTimeout(() => {
-                cursorFollower.style.left = e.clientX + 'px';
-                cursorFollower.style.top = e.clientY + 'px';
-            }, 100);
-        });
-        
-        document.addEventListener('mousedown', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
-            cursorFollower.style.transform = 'translate(-50%, -50%) scale(0.5)';
-        });
-        
-        document.addEventListener('mouseup', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
-        });
-        
-        // GSAP Animations
-        gsap.registerPlugin(ScrollTrigger);
-        
-        // Hero animations
-        gsap.to('.blob-1', {
-            x: 100,
-            y: 50,
-            duration: 20,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut'
-        });
-        
-        gsap.to('.blob-2', {
-            x: -100,
-            y: -50,
-            duration: 18,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut'
-        });
-        
-        gsap.to('.blob-3', {
-            x: -50,
-            y: 100,
-            duration: 22,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut'
-        });
-        
-        // Scroll animations for sections
-        const sections = document.querySelectorAll('section');
-        
-        sections.forEach(section => {
-            gsap.fromTo(
-                section, 
-                { y: 50, opacity: 0 },
-                { 
-                    y: 0, 
-                    opacity: 1,
-                    scrollTrigger: {
-                        trigger: section,
-                        start: 'top 80%',
-                        end: 'top 50%',
-                        scrub: 1
-                    }
-                }
-            );
-        });
-        
-        // Timeline animations
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        
-        timelineItems.forEach(item => {
-            gsap.fromTo(
-                item, 
-                { 
-                    x: item.classList.contains('left') ? -50 : 50, 
-                    opacity: 0 
-                },
-                { 
-                    x: 0, 
-                    opacity: 1,
-                    scrollTrigger: {
-                        trigger: item,
-                        start: 'top 80%',
-                        end: 'top 60%',
-                        scrub: 1
-                    }
-                }
-            );
-        });
-        
-        // Form submission handling
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            console.log('Form submitted:', { name, email, message });
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Show success message
-            alert('Thanks for your message! I\'ll get back to you soon.');
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
