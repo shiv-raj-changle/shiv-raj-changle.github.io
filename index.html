@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emailjs/3.11.0/email.min.js"></script>
     <style>
         :root {
             /* Light Theme Variables */
@@ -411,6 +412,16 @@
         .project-image {
             height: 200px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--glass-bg), var(--glass-border));
+        }
+
+        .project-image i {
+            font-size: 5rem;
+            color: var(--accent-color);
+            opacity: 0.7;
         }
 
         .project-image img {
@@ -472,6 +483,44 @@
 
         .project-link:hover {
             transform: translateY(-3px);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            padding: 2rem;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 15px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-color);
         }
 
         /* Resume Section */
@@ -652,6 +701,26 @@
         .form-textarea {
             min-height: 150px;
             resize: vertical;
+        }
+
+        /* Alert styles */
+        .alert {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .alert-success {
+            background-color: rgba(72, 187, 120, 0.2);
+            color: #2f855a;
+            border: 1px solid rgba(72, 187, 120, 0.5);
+        }
+
+        .alert-error {
+            background-color: rgba(245, 101, 101, 0.2);
+            color: #e53e3e;
+            border: 1px solid rgba(245, 101, 101, 0.5);
         }
 
         /* Footer */
@@ -876,7 +945,7 @@
                 <!-- Project 1 -->
                 <div class="project-card glass">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Qt WebAssembly Application" />
+                        <i class="fab fa-js-square"></i>
                     </div>
                     <div class="project-details">
                         <h3 class="project-title">Qt & WebAssembly Application</h3>
@@ -888,8 +957,7 @@
                             <span class="project-tag">Emscripten</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="javascript:void(0)" class="project-link btn-secondary" onclick="showProjectInfo(1)"><i class="fas fa-info-circle"></i> Details</a>
                         </div>
                     </div>
                 </div>
@@ -897,7 +965,7 @@
                 <!-- Project 2 -->
                 <div class="project-card glass">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Multithreaded Video Processing" />
+                        <i class="fas fa-video"></i>
                     </div>
                     <div class="project-details">
                         <h3 class="project-title">Multithreaded Video Processing</h3>
@@ -909,8 +977,7 @@
                             <span class="project-tag">Binary Semaphores</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="javascript:void(0)" class="project-link btn-secondary" onclick="showProjectInfo(2)"><i class="fas fa-info-circle"></i> Details</a>
                         </div>
                     </div>
                 </div>
@@ -918,7 +985,7 @@
                 <!-- Project 3 -->
                 <div class="project-card glass">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Offline Chatbot" />
+                        <i class="fas fa-robot"></i>
                     </div>
                     <div class="project-details">
                         <h3 class="project-title">Offline Chatbot with ChromaDB</h3>
@@ -930,8 +997,7 @@
                             <span class="project-tag">AI</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="javascript:void(0)" class="project-link btn-secondary" onclick="showProjectInfo(3)"><i class="fas fa-info-circle"></i> Details</a>
                         </div>
                     </div>
                 </div>
@@ -939,7 +1005,7 @@
                 <!-- Project 4 -->
                 <div class="project-card glass">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Docker AI Deployment" />
+                        <i class="fab fa-docker"></i>
                     </div>
                     <div class="project-details">
                         <h3 class="project-title">Docker-Based AI Deployment</h3>
@@ -951,11 +1017,39 @@
                             <span class="project-tag">AI</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="javascript:void(0)" class="project-link btn-secondary" onclick="showProjectInfo(4)"><i class="fas fa-info-circle"></i> Details</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project 5 -->
+                <div class="project-card glass">
+                    <div class="project-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title">MISRA C++ Compliance</h3>
+                        <p class="project-description">Integrated Cppcheck with the MISRA addon for safety-critical applications. Configured .cppcheck settings for both GUI and CLI execution for optimal static analysis.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">MISRA</span>
+                            <span class="project-tag">Cppcheck</span>
+                            <span class="project-tag">Static Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="javascript:void(0)" class="project-link btn-secondary" onclick="showProjectInfo(5)"><i class="fas fa-info-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Modal -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-modal">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <div id="modalContent"></div>
             </div>
         </div>
     </section>
@@ -1019,7 +1113,7 @@
             <div class="contact-info">
                 <h3>Get In Touch</h3>
                 <p>Feel free to reach out if you're looking for a skilled Qt/C++ developer or have a project that requires multithreaded application development or AI integration.</p>
-                <p>Email: shivraj.changle@example.com</p>
+                <p>Email: shivrajchangle11@gmail.com</p>
                 <p>Location: India</p>
                 <p>LinkedIn: <a href="https://linkedin.com/in/shivraj-changle-aa596b1bb" target="_blank">linkedin.com/in/shivraj-changle-aa596b1bb</a></p>
                 <div class="contact-links">
@@ -1030,20 +1124,26 @@
                 </div>
             </div>
             <div class="contact-form neuro">
+                <div id="successAlert" class="alert alert-success">
+                    Your message has been sent successfully! I'll get back to you soon.
+                </div>
+                <div id="errorAlert" class="alert alert-error">
+                    There was an error sending your message. Please try again later.
+                </div>
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" class="form-input" required>
+                        <input type="text" id="name" name="user_name" class="form-input" required>
                     </div>
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" class="form-input" required>
+                        <input type="email" id="email" name="user_email" class="form-input" required>
                     </div>
                     <div class="form-group">
                         <label for="message" class="form-label">Message</label>
-                        <textarea id="message" class="form-input form-textarea" required></textarea>
+                        <textarea id="message" name="message" class="form-input form-textarea" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message <i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
@@ -1101,6 +1201,109 @@
             navLinks.classList.remove('active');
             mobileToggle.querySelector('i').className = 'fas fa-bars';
         });
+    });
+    
+    // Project modal functionality
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+    const closeModal = document.querySelector('.close-modal');
+    
+    const projectDetails = {
+        1: {
+            title: "Qt & WebAssembly Application",
+            content: `
+            <p>This project involved building a robust C++/QML application that runs directly in the browser using WebAssembly technology.</p>
+            <h4>Technical Challenges Solved:</h4>
+            <ul>
+                <li>Successfully compiled Qt/C++ code to WebAssembly using Emscripten (em++, wasm-ld)</li>
+                <li>Resolved complex threading issues with pthread during compilation</li>
+                <li>Implemented memory optimization techniques to prevent heap memory growth</li>
+                <li>Created custom solutions for OpenGL compatibility across different browsers</li>
+                <li>Developed a responsive UI that works across desktop and mobile browsers</li>
+            </ul>
+            <p>This project demonstrated my deep understanding of both Qt/QML architecture and WebAssembly compilation process, allowing desktop applications to run natively in browsers without plugins.</p>
+            `
+        },
+        2: {
+            title: "Multithreaded Video Processing",
+            content: `
+            <p>I developed a high-performance video processing application that handles real-time analysis of video streams using OpenCV.</p>
+            <h4>Key Achievements:</h4>
+            <ul>
+                <li>Designed a producer-consumer architecture with multiple worker threads</li>
+                <li>Implemented binary semaphores for precise thread synchronization</li>
+                <li>Optimized memory usage to handle 4K video streams without frame dropping</li>
+                <li>Created a frame buffering system to manage processing speed variations</li>
+                <li>Implemented automatic thread scaling based on system capabilities</li>
+            </ul>
+            <p>This project significantly improved processing speeds compared to single-threaded alternatives, allowing for real-time analysis of high-resolution video streams with minimal latency.</p>
+            `
+        },
+        3: {
+            title: "Offline Chatbot with ChromaDB",
+            content: `
+            <p>I built a completely offline AI chatbot application that uses vector embeddings for intelligent responses without requiring an internet connection.</p>
+            <h4>Technical Features:</h4>
+            <ul>
+                <li>Integrated ChromaDB for efficient vector-based search and retrieval</li>
+                <li>Developed a user-friendly interface using PySide6 (Qt for Python)</li>
+                <li>Created a document ingestion system that converts various file formats to searchable embeddings</li>
+                <li>Implemented a ranking algorithm to improve response relevance</li>
+                <li>Packaged the entire application (including AI models) into a standalone executable using PyInstaller</li>
+            </ul>
+            <p>This project demonstrates my ability to work with modern AI techniques while creating practical, user-friendly applications that solve real business problems.</p>
+            `
+        },
+        4: {
+            title: "Docker-Based AI Deployment",
+            content: `
+            <p>I developed an optimized Docker-based deployment for an AI chatbot that significantly reduced resource requirements while maintaining full functionality.</p>
+            <h4>Optimization Achievements:</h4>
+            <ul>
+                <li>Reduced Docker image size from 9GB to under 2GB (78% reduction)</li>
+                <li>Managed a 2.6GB Python environment and 2.7GB AI model efficiently</li>
+                <li>Implemented persistent volume storage to prevent redundant model downloads</li>
+                <li>Created a streamlined Streamlit-based UI for easy interaction</li>
+                <li>Developed a multi-stage Docker build process to minimize final image size</li>
+            </ul>
+            <p>This project showcases my skills in Docker optimization, Python application development, and efficient AI deployment strategies for production environments.</p>
+            `
+        },
+        5: {
+            title: "MISRA C++ Compliance & Static Analysis",
+            content: `
+            <p>I implemented a comprehensive static analysis system for safety-critical C++ applications, ensuring MISRA compliance and code quality.</p>
+            <h4>Implementation Details:</h4>
+            <ul>
+                <li>Integrated Cppcheck with MISRA addon for thorough code analysis</li>
+                <li>Configured custom .cppcheck settings for both GUI and CLI execution</li>
+                <li>Developed automation scripts to integrate static analysis into CI/CD pipelines</li>
+                <li>Created custom rule sets tailored to project-specific requirements</li>
+                <li>Implemented reporting tools to track compliance metrics over time</li>
+            </ul>
+            <p>This project significantly improved code quality and safety compliance, making it suitable for use in medical devices and other safety-critical applications.</p>
+            `
+        }
+    };
+    
+    function showProjectInfo(projectId) {
+        const project = projectDetails[projectId];
+        if (project) {
+            modalTitle.textContent = project.title;
+            modalContent.innerHTML = project.content;
+            modal.style.display = "block";
+        }
+    }
+    
+    closeModal.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+    
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     });
     
     // GSAP Animations
@@ -1177,54 +1380,55 @@
         );
     });
     
-    // Form submission handling with email functionality
+    // EmailJS Integration
+    (function() {
+        // Initialize EmailJS with your user ID
+        emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS User ID
+    })();
+    
+    // Form submission handling with EmailJS
     const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successAlert = document.getElementById('successAlert');
+    const errorAlert = document.getElementById('errorAlert');
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         
-        // In a real implementation, you would send this data to your server
-        // which would then forward it to your email address
-        // For demonstration purposes, we'll simulate this process
+        // Hide any previous alerts
+        successAlert.style.display = 'none';
+        errorAlert.style.display = 'none';
         
-        // This would be replaced with actual server-side code
-        const sendEmail = async (data) => {
-            try {
-                // In a real implementation, this would be an API endpoint
-                // that processes the form data and sends an email
-                // e.g., await fetch('/api/send-email', {
-                //    method: 'POST',
-                //    headers: { 'Content-Type': 'application/json' },
-                //    body: JSON.stringify(data)
-                // });
+        // Send the email using EmailJS
+        emailjs.sendForm('gmail', 'template_id', this, 'YOUR_USER_ID')
+            .then(function() {
+                // Success handling
+                contactForm.reset();
+                successAlert.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
                 
-                console.log('Email would be sent to shivraj.changle@example.com with:', data);
-                return { success: true };
-            } catch (error) {
-                console.error('Error sending email:', error);
-                return { success: false, error };
-            }
-        };
-        
-        // Simulate sending email
-        sendEmail({ name, email, message })
-            .then(response => {
-                if (response.success) {
-                    // Reset form
-                    contactForm.reset();
-                    
-                    // Show success message
-                    alert('Thanks for your message! I\'ll get back to you soon.');
-                } else {
-                    alert('There was a problem sending your message. Please try again later.');
-                }
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successAlert.style.display = 'none';
+                }, 5000);
+            }, function(error) {
+                // Error handling
+                console.error('Email sending failed:', error);
+                errorAlert.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+                
+                // Hide error message after 5 seconds
+                setTimeout(() => {
+                    errorAlert.style.display = 'none';
+                }, 5000);
             });
     });
 </script>
 </body>
-</html>
+</html> 
