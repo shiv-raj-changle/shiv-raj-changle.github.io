@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shivraj Changle | Portfolio</title>
-    <meta name="description" content="Professional portfolio of Shivraj Changle - Software Developer specializing in Qt, QML, C++, and AI integration">
+    <meta name="description" content="Portfolio of Shivraj Changle - Software Engineer specializing in Qt/QML, C++, multithreaded applications and AI integration.">
+    <meta name="author" content="Shivraj Changle">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c3aed'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff'%3ESC%3C/text%3E%3C/svg%3E">
+    <meta property="og:title" content="Shivraj Changle | Software Engineer">
+    <meta property="og:description" content="Qt/QML, C++, multithreaded applications and AI integration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shiv-raj-changle.github.io/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/emailjs/3.11.0/email.min.js"></script>
     <style>
         :root {
             /* Light Theme Variables */
@@ -509,6 +514,8 @@
         }
 
         .close-modal {
+            background: none;
+            border: none;
             position: absolute;
             top: 1rem;
             right: 1.5rem;
@@ -790,6 +797,43 @@
         }
 
         /* Responsive Styles */
+        .about-image img {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .about-image .avatar {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-color-hover));
+            color: #fff;
+        }
+
+        .about-image .avatar-initials {
+            font-size: 6rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .about-image .avatar-caption {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
         @media (min-width: 1024px) {
             .cursor, .cursor-follower {
                 display: block;
@@ -899,7 +943,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Shivraj Changle</h1>
-                <p class="hero-subtitle">Software Developer | Qt, QML, C++ | Full-Stack & AI Enthusiast</p>
+                <p class="hero-subtitle">Software Developer specializing in Qt, QML and C++, with experience in full-stack and AI development</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -915,7 +959,7 @@
             <div class="about-container">
                 <div class="about-content">
                     <h3>Hello! I'm Shivraj Changle</h3>
-                    <p>I am a highly skilled C++ and Qt developer with expertise in building high-performance, multithreaded applications for desktop, embedded systems, and WebAssembly. With over 2 years of experience, I have worked on multiple real-time processing, AI, and UI-heavy applications.</p>
+                    <p>I am a highly skilled C++ and Qt developer with expertise in building high-performance, multithreaded applications for desktop, embedded systems, and WebAssembly. With 4+ years of experience, I have worked on multiple real-time processing, AI, and UI-heavy applications.</p>
                     <p>I specialize in multithreading, OpenCV, Qt for WebAssembly, and device integration. Recently, I have been exploring Angular, .NET, and Python for full-stack development. My ability to solve complex problems, optimize performance, and integrate new technologies makes me a valuable asset to any development team.</p>
                     <div class="skills">
                         <div class="skill-tag glass">Qt/QML</div>
@@ -931,7 +975,11 @@
                     </div>
                 </div>
                 <div class="about-image neuro">
-                    <img src="/api/placeholder/400/320" alt="Shivaraj Changale" />
+                    <img src="profile.jpg" alt="Shivraj Changle" onerror="this.remove()" />
+                    <div class="avatar" role="img" aria-label="Shivraj Changle">
+                        <span class="avatar-initials">SC</span>
+                        <span class="avatar-caption">Software Engineer</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -945,11 +993,11 @@
                 <!-- Project 1 -->
                 <div class="project-card glass">
                     <div class="project-image">
-                        <i class="fab fa-js-square"></i>
+                        <i class="fas fa-globe"></i>
                     </div>
                     <div class="project-details">
-                        <h3 class="project-title">Qt & WebAssembly Application</h3>
-                        <p class="project-description">Built a C++/QML-based Qt application that runs in the browser using Emscripten (em++, wasm-ld) to compile for WebAssembly. Debugged threading & memory growth issues for a smoother experience.</p>
+                        <h3 class="project-title">Qt and WebAssembly Application</h3>
+                        <p class="project-description">Built a C++/QML-based Qt application that runs in the browser using Emscripten (em++, wasm-ld) to compile for WebAssembly. Debugged threading and memory growth issues for a smoother experience.</p>
                         <div class="project-tags">
                             <span class="project-tag">Qt/QML</span>
                             <span class="project-tag">C++</span>
@@ -1045,9 +1093,9 @@
         </div>
 
         <!-- Project Modal -->
-        <div id="projectModal" class="modal">
+        <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <div class="modal-content glass">
-                <span class="close-modal">&times;</span>
+                <button type="button" class="close-modal" aria-label="Close">&times;</button>
                 <h2 id="modalTitle"></h2>
                 <div id="modalContent"></div>
             </div>
@@ -1059,7 +1107,7 @@
         <div class="container">
             <div class="resume-header">
                 <h2 class="section-title">Resume</h2>
-                <a href="#" class="btn btn-primary resume-btn">Download Resume <i class="fas fa-download"></i></a>
+                <a href="mailto:shivrajchangle11@gmail.com?subject=Resume%20Request" class="btn btn-primary resume-btn">Request Resume <i class="fas fa-envelope"></i></a>
             </div>
             <div class="timeline">
                <!-- Timeline Item 1 -->
@@ -1067,8 +1115,8 @@
                 <div class="timeline-content glass">
                     <div class="timeline-date">2022 - Present</div>
                     <h3 class="timeline-title">Software Developer</h3>
-                    <div class="timeline-subtitle">Qt & C++ Focus (2+ Years)</div>
-                    <p class="timeline-description">Developed multithreaded, real-time applications for ultrasonic thickness gauges (Mozart 62DLP, 72DLP) & XRF analyzers. Built video processing tools with OpenCV and worked on Qt WebAssembly.</p>
+                    <div class="timeline-subtitle">Qt and C++ Applications</div>
+                    <p class="timeline-description">Developed multithreaded, real-time applications for industrial measurement instruments, including ultrasonic thickness gauges and XRF analyzers. Built video processing tools with OpenCV and worked on Qt WebAssembly.</p>
                 </div>
             </div>
 
@@ -1077,7 +1125,7 @@
                 <div class="timeline-content glass">
                     <div class="timeline-date">2023</div>
                     <h3 class="timeline-title">AI Application Developer</h3>
-                    <div class="timeline-subtitle">ChromaDB & Vector Search</div>
+                    <div class="timeline-subtitle">ChromaDB and Vector Search</div>
                     <p class="timeline-description">Created an offline chatbot application using ChromaDB for vector-based search. Optimized Docker images (from 9GB to under 2GB) by managing model storage and dependencies.</p>
                 </div>
             </div>
@@ -1088,17 +1136,17 @@
                     <div class="timeline-date">2022</div>
                     <h3 class="timeline-title">Embedded Systems Developer</h3>
                     <div class="timeline-subtitle">Device Integration</div>
-                    <p class="timeline-description">Integrated Cppcheck & MISRA static analysis into the workflow for safety-critical applications. Developed and managed Python-based automation scripts for Google Sheets.</p>
+                    <p class="timeline-description">Integrated Cppcheck and MISRA static analysis into the workflow for safety-critical applications. Developed and managed Python-based automation scripts for Google Sheets.</p>
                 </div>
             </div>
 
             <!-- Timeline Item 4 -->
             <div class="timeline-item right">
                 <div class="timeline-content glass">
-                    <div class="timeline-date">Certifications</div>
+                    <div class="timeline-date">Code Quality</div>
                     <h3 class="timeline-title">MISRA C++ Compliance</h3>
-                    <div class="timeline-subtitle">Static Analysis Expert</div>
-                    <p class="timeline-description">Implemented Cppcheck & cpplint for static analysis. Configured .cppcheck settings for both GUI and CLI execution for safety-critical applications.</p>
+                    <div class="timeline-subtitle">Static Analysis and Safety Standards</div>
+                    <p class="timeline-description">Implemented Cppcheck and cpplint for static analysis. Configured .cppcheck settings for both GUI and CLI execution for safety-critical applications.</p>
                 </div>
             </div>
         </div>
@@ -1112,20 +1160,19 @@
         <div class="contact-container">
             <div class="contact-info">
                 <h3>Get In Touch</h3>
-                <p>Feel free to reach out if you're looking for a skilled Qt/C++ developer or have a project that requires multithreaded application development or AI integration.</p>
-                <p>Email: shivrajchangle11@gmail.com</p>
+                <p>I'm open to conversations about software engineering roles and collaborations, particularly Qt/C++ applications, multithreaded and real-time systems, AI integration and full-stack development.</p>
+                <p>Email: <a href="mailto:shivrajchangle11@gmail.com">shivrajchangle11@gmail.com</a></p>
                 <p>Location: India</p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/shivraj-changle-aa596b1bb" target="_blank">linkedin.com/in/shivraj-changle-aa596b1bb</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/shivraj-changle-aa596b1bb" target="_blank" rel="noopener noreferrer">linkedin.com/in/shivraj-changle-aa596b1bb</a></p>
                 <div class="contact-links">
-                    <a href="#" class="contact-link glass"><i class="fab fa-github"></i></a>
-                    <a href="#" class="contact-link glass"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="contact-link glass"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="contact-link glass"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/shiv-raj-changle" class="contact-link glass" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/shivraj-changle-aa596b1bb" class="contact-link glass" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:shivrajchangle11@gmail.com" class="contact-link glass" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="contact-form neuro">
                 <div id="successAlert" class="alert alert-success">
-                    Your message has been sent successfully! I'll get back to you soon.
+                    Your email client has been opened with your message. Just press send and I'll get back to you soon.
                 </div>
                 <div id="errorAlert" class="alert alert-error">
                     There was an error sending your message. Please try again later.
@@ -1211,7 +1258,7 @@
     
     const projectDetails = {
         1: {
-            title: "Qt & WebAssembly Application",
+            title: "Qt and WebAssembly Application",
             content: `
             <p>This project involved building a robust C++/QML application that runs directly in the browser using WebAssembly technology.</p>
             <h4>Technical Challenges Solved:</h4>
@@ -1271,7 +1318,7 @@
             `
         },
         5: {
-            title: "MISRA C++ Compliance & Static Analysis",
+            title: "MISRA C++ Compliance and Static Analysis",
             content: `
             <p>I implemented a comprehensive static analysis system for safety-critical C++ applications, ensuring MISRA compliance and code quality.</p>
             <h4>Implementation Details:</h4>
@@ -1287,26 +1334,41 @@
         }
     };
     
+    let lastFocused = null;
+
     function showProjectInfo(projectId) {
         const project = projectDetails[projectId];
         if (project) {
+            lastFocused = document.activeElement;
             modalTitle.textContent = project.title;
             modalContent.innerHTML = project.content;
             modal.style.display = "block";
+            closeModal.focus();
         }
     }
-    
-    closeModal.addEventListener('click', () => {
+
+    function hideProjectInfo() {
         modal.style.display = "none";
-    });
-    
+        if (lastFocused) lastFocused.focus();
+    }
+
+    closeModal.addEventListener('click', hideProjectInfo);
+
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
-            modal.style.display = "none";
+            hideProjectInfo();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.style.display === "block") {
+            hideProjectInfo();
         }
     });
     
-    // GSAP Animations
+    // GSAP Animations (skipped if the library fails to load or reduced motion is preferred)
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !prefersReducedMotion) {
     gsap.registerPlugin(ScrollTrigger);
     
     // Hero animations
@@ -1379,55 +1441,27 @@
             }
         );
     });
-    
-    // EmailJS Integration
-    (function() {
-        // Initialize EmailJS with your user ID
-        emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS User ID
-    })();
-    
-    // Form submission handling with EmailJS
+    }
+
+    // Contact form: opens the visitor's email client with the message pre-filled
     const contactForm = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
     const successAlert = document.getElementById('successAlert');
-    const errorAlert = document.getElementById('errorAlert');
-    
+
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Show loading state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        
-        // Hide any previous alerts
-        successAlert.style.display = 'none';
-        errorAlert.style.display = 'none';
-        
-        // Send the email using EmailJS
-        emailjs.sendForm('gmail', 'template_id', this, 'YOUR_USER_ID')
-            .then(function() {
-                // Success handling
-                contactForm.reset();
-                successAlert.style.display = 'block';
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    successAlert.style.display = 'none';
-                }, 5000);
-            }, function(error) {
-                // Error handling
-                console.error('Email sending failed:', error);
-                errorAlert.style.display = 'block';
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
-                
-                // Hide error message after 5 seconds
-                setTimeout(() => {
-                    errorAlert.style.display = 'none';
-                }, 5000);
-            });
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+        const body = encodeURIComponent(`${message}\n\n${name}\n${email}`);
+        window.location.href = `mailto:shivrajchangle11@gmail.com?subject=${subject}&body=${body}`;
+
+        successAlert.style.display = 'block';
+        setTimeout(() => {
+            successAlert.style.display = 'none';
+        }, 5000);
     });
 </script>
 </body>
